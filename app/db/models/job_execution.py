@@ -17,6 +17,11 @@ class JobExecution(Base):
     error_threshold = Column(Float)
     latency_threshold = Column(Integer)
 
+    total_requests = Column(Integer, default=0)
+    error_count = Column(Integer, default=0)
+    max_latency = Column(Integer, default=0)
+    alerts_generated = Column(Integer, default=0)
+
     status = Column(String, nullable=False, default="PENDING")
     started_at = Column(DateTime(timezone=True))
     completed_at = Column(DateTime(timezone=True))

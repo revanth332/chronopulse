@@ -30,6 +30,7 @@ poetry.lock
 *.db
 *.sqlite
 *.sqlite3
+uploads/
 
 # =========================
 # Logs

@@ -10,4 +10,5 @@ class File(Base):
     filename = Column(String,nullable=False)
     size_bytes = Column(BigInteger,nullable=False)
     checksum = Column(String,nullable=False)
+    storage_path = Column(String, nullable=False)
     uploaded_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
